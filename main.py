@@ -23,9 +23,8 @@ cur.execute(''' CREATE TABLE EVENEMENTS( id real,
 
     # Table Participations
 cur.execute(''' CREATE TABLE PARTICIPATIONS( id real,
-                                             idEvenement real,
-                                             nomParoisse text,
-                                             nomResponsable text,
+                                             idEvenement real, 
+                                             idResponsable real,
                                              nbreParticipants real,
                                              nomParticipant text,
                                              statutParticipant text )''')
@@ -39,13 +38,13 @@ cur.execute(''' INSERT INTO INSCRIPTIONS VALUES ( 1, 'Paroisse St Thérèse', 'L
 cur.execute(''' INSERT INTO EVENEMENTS VALUES( 1, 'Nuit de prière', '02-01-2023', 25000 ) ''')
 
     # Insertions dans la table PARTICIPATIONS
-cur.execute(''' INSERT INTO PARTICIPATIONS VALUES( 1, 1, 'Paroisse St Thérèse', 'David', 3, 'LOKO David' , 
+cur.execute(''' INSERT INTO PARTICIPATIONS VALUES( 1, 1, 1, 3, 'LOKO David' , 
                 'Assistant' ) ''')
 
-cur.execute(''' INSERT INTO PARTICIPATIONS VALUES( 2, 1, 'Paroisse St Thérèse', 'David', 3, 'BOUKARI Flora' , 
+cur.execute(''' INSERT INTO PARTICIPATIONS VALUES( 2, 1, 1, 3, 'BOUKARI Flora' , 
                 'Donatrice' ) ''')
 
-cur.execute(''' INSERT INTO PARTICIPATIONS VALUES( 3, 1, 'Paroisse St Thérèse', 'David', 3, 'SOVI Carmelle' , 
+cur.execute(''' INSERT INTO PARTICIPATIONS VALUES( 3, 1, 1, 3, 'SOVI Carmelle' , 
                 'Comptable' ) ''')
 
 # Affichage des données des tables
